@@ -10,7 +10,9 @@ const cors = require("cors");
 // Middlewares
 app.use(cors())
 app.use(express.json());
+app.use('/api', apiRoutes);  // API routes
 
+app.use(express.static('view')); // Serve static files from 'view'
 connectDB();
 
 // Use the jobRouter for all "/jobs" routes
@@ -18,12 +20,17 @@ app.use("/api/jobs", jobRouter);
 // Use the userRouter for all "/jobs" routes
 app.use("/api/users", userRouter);
 
+// Catch-all route for React frontend
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/view/index.html');
+});
 
+// Error handling middleware
 app.use(unknownEndpoint);
 app.use(errorHandler);
 
 module.exports = app;
 
-// app.listen(process.env.PORT, () => {
+//app.listen(process.env.PORT, () => {
 //   console.log(`Server running on port ${process.env.PORT}`)
 // })  

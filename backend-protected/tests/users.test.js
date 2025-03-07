@@ -42,6 +42,7 @@ describe("User Routes", () => {
         username: "johnfd",
         password:"hgf",
         phone_number: "1234567890",
+        gender: "male",
         date_of_birth: "1990-01-01",
         membership_status: "Active",
         bio: "testttt",
