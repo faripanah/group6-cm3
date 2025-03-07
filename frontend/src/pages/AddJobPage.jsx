@@ -180,7 +180,7 @@ const AddJobPage = () => {
           onChange={(e) => setApplicationDeadline(e.target.value)}
         />
 
-        <label>Requirements (comma-separated):</label>
+        <label>Requirements:</label>
         <input
           type="text"
           value={requirements}
