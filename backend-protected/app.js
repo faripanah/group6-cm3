@@ -10,7 +10,7 @@ const cors = require("cors");
 // Middlewares
 app.use(cors())
 app.use(express.json());
-app.use('/api', apiRoutes);  // API routes
+
 
 app.use(express.static('view')); // Serve static files from 'view'
 connectDB();
