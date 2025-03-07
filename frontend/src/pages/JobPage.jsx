@@ -62,9 +62,17 @@ const JobPage = () => {
           <h2>{job.title}</h2>
           <p>Type: {job.type}</p>
           <p>Description: {job.description}</p>
-          <p>Company: {job.company.name}</p>
+          <p>CompanyName: {job.company.name}</p>
           <p>Email: {job.company.contactEmail}</p>
           <p>Phone: {job.company.contactPhone}</p>
+          <p>Website: {job.company.website}</p>
+          <p>Numberof employee: {job.size}</p>
+          <p>Location: {job.location}</p>
+          <p>Salary: {job.salary}</p>
+          <p>Experience Level: {job.experienceLevel}</p>
+          <p>Posted Date: {new Date(job.postedDate).toLocaleDateString()}</p>
+          <p>Status: {job.status}</p>
+          <p>ApplicationDeadline: {job.applicationDeadline}</p>
           <button onClick={() => onDeleteClick(job._id)}  className="btn">delete</button>
         </>
       )}

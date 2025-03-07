@@ -5,7 +5,7 @@ const JobListings = ({ jobs }) => {
   return (
     <div className="job-list">
       {jobs.map((job) => (
-        <JobListing key={job.id} job={job} />
+        <JobListing key={job._id} job={job} />
       ))}
     </div>
   );

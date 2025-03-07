@@ -235,7 +235,7 @@ const EditJobPage = () => {
           onChange={(e) => setApplicationDeadline(e.target.value)}
         />
 
-        <label>Requirements:</label>
+        <label>Requirements :</label>
         <input
           type="text"
           value={requirements}

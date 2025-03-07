@@ -10,8 +10,8 @@ const JobListing = ({ job }) => {
       <p>Location: {job.location}</p>
       <p>Salary: {job.salary}</p>
       <p>Number of employee: {job.size}</p>
-      <Link to={`/jobs/${job.id}`}  className="btn">View Job</Link> 
-      <Link to={`/edit-job/${job.id}`} className="btn">Edit Job</Link>
+      <Link to={`/jobs/${job._id}`}  className="btn">View Job</Link> 
+      <Link to={`/edit-job/${job._id}`} className="btn">Edit Job</Link>
     </div>
   );
 };
