@@ -15,6 +15,9 @@ const getAllJobs = async (req, res) => {
 
 // Create a new job
 const createJob = async (req, res) => {
+  if (!req.user) {
+    return res.status(401).json({ error: "User not authenticated" });
+  }
 
   try {
     const user_id = req.user._id;
