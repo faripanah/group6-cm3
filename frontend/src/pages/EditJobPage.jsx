@@ -9,7 +9,7 @@ const EditJobPage = () => {
 
   // Declare state variables for form fields
   const [title, setTitle] = useState("");
-  const [type, setType] = useState("Full-Time");
+  const [type, setType] = useState("");
   const [description, setDescription] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
@@ -244,7 +244,7 @@ const EditJobPage = () => {
 
         
 
-        <button>Add Job</button>
+        <button>Edit job</button>
       </form>
       )}
     </div>
