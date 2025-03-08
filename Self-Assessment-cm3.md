@@ -1,4 +1,3 @@
-
 # Self-Assessment cm3
 
 
@@ -10,32 +9,30 @@ On the frontend side, we had difficulties establishing the connection with the b
 
 ```javascript
 
-	import { defineConfig } from 'vite'
-	import react from '@vitejs/plugin-react'
 
-	// https://vitejs.dev/config/
 
-	export default defineConfig({
-  	plugins: [react()],
-  	server: {
-    	port: 3000,
-    	proxy: {
-    	  '/api': {
-        	target: 'http://localhost:4000',
-        	changeOrigin: true,
-     	 },
-   	 }
-  	},
-	})
+    	import { defineConfig } from 'vite'
+    	import react from '@vitejs/plugin-react'
+    
+    	// https://vitejs.dev/config/
+    
+    	export default defineConfig({
+      	plugins: [react()],
+      	server: {
+        	port: 3000,
+        	proxy: {
+        	  '/api': {
+            	target: 'http://localhost:4000',
+            	changeOrigin: true,
+         	 },
+       	 }
+      	},
+    	})
+
+````
 
 -On the backend side, we had a syntax error.
-
 ```javascript
-
-
-
-
-
 
   		name: { type: String, required: true },
   		userName: { type: String, required: true, unique: true },
@@ -43,10 +40,15 @@ On the frontend side, we had difficulties establishing the connection with the b
   		phone_Number: { type: String, required: true },
   		gender: { type: String, required: true },
  	 	Date_of_birth: { type: Date, required: true },
-  
+````
+
+
+
 
 
 -By correcting the fields in the code provided by the professor, we were able to successfully establish the connection.
+
+```javascript
 
 	const mongoose = require("mongoose");
 
@@ -66,7 +68,6 @@ On the frontend side, we had difficulties establishing the connection with the b
 	}, { timestamps: true, versionKey: false });
 
 	module.exports = mongoose.model("User", userSchema);
-
 
 
 
